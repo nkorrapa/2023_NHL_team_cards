@@ -1,1 +1,1 @@
-# density map of where the team takes shots from
+# density map of where the player takes shots from

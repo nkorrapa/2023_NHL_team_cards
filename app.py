@@ -5,3 +5,6 @@ import streamlit as st
 st.header("NHL Team Cards")
 
 st.write("Pick a NHL Team")
+
+st.write("Pick a '{{ team }}' player")
+
