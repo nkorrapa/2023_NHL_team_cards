@@ -15,9 +15,9 @@ def load_file(file):
         df = pd.read_csv(file)
     return(df)
 
-pbp= load_file("2023pbp.csv")
+pbp= load_file("data/2023pbp.csv")
 
-teams = load_file("teams.csv")
+teams = load_file("data/teams.csv")
 
 st.header("NHL Team Cards")
 
