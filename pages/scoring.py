@@ -1,1 +1,1 @@
-# sankey diagram of who assists who on this player
+# sankey diagram of who assists who on this team
