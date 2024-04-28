@@ -1,33 +1,33 @@
-event_team,event_team_id
-Anaheim Ducks,24.0
-Arizona Coyotes,53.0
-Boston Bruins,6.0
-Buffalo Sabres,7.0
-Calgary Flames,20.0
-Carolina Hurricanes,12.0
-Chicago Blackhawks,16.0
-Colorado Avalanche,21.0
-Columbus Blue Jackets,29.0
-Dallas Stars,25.0
-Detroit Red Wings,17.0
-Edmonton Oilers,22.0
-Florida Panthers,13.0
-Los Angeles Kings,26.0
-Minnesota Wild,30.0
-Montréal Canadiens,8.0
-Nashville Predators,18.0
-New Jersey Devils,1.0
-New York Islanders,2.0
-New York Rangers,3.0
-Ottawa Senators,9.0
-Philadelphia Flyers,4.0
-Pittsburgh Penguins,5.0
-San Jose Sharks,28.0
-Seattle Kraken,55.0
-St. Louis Blues,19.0
-Tampa Bay Lightning,14.0
-Toronto Maple Leafs,10.0
-Vancouver Canucks,23.0
-Vegas Golden Knights,54.0
-Washington Capitals,15.0
-Winnipeg Jets,52.0
+event_team,event_team_id,home_arena,conference,division
+Anaheim Ducks,24,Honda Center,Western,Pacific
+Arizona Coyotes,53,Mullett Arena,Western,Central
+Boston Bruins,6,TD Garden,Eastern,Atlantic
+Buffalo Sabres,7,KeyBank Center,Eastern,Atlantic
+Calgary Flames,20,Scotiabank Saddledome,Western,Pacific
+Carolina Hurricanes,12,PNC Arena,Eastern,Metropolitan
+Chicago Blackhawks,16,United Center,Western,Central
+Colorado Avalanche,21,Ball Arena,Western,Central
+Columbus Blue Jackets,29,Nationwide Arena,Eastern,Metropolitan
+Dallas Stars,25,American Airlines Center,Western,Central
+Detroit Red Wings,17,Little Caesars Arena,Eastern,Atlantic
+Edmonton Oilers,22,Rodgers Place,Western,Pacific
+Florida Panthers,13,Amerant Bank Arena,Eastern,Atlantic
+Los Angeles Kings,26,Crypto.com Arena,Western,Pacific
+Minnesota Wild,30,Xcel Energy Center,Western,Central
+Montréal Canadiens,8,Bell Centre,Eastern,Atlantic
+Nashville Predators,18,Bridgestone Arena,Western,Central
+New Jersey Devils,1,Prudential Center,Eastern,Metropolitan
+New York Islanders,2,UBS Arena,Eastern,Metropolitan
+New York Rangers,3,Madison Square Garden,Eastern,Metropolitan
+Ottawa Senators,9,Canadian Tire Center,Eastern,Atlantic
+Philadelphia Flyers,4,Wells Fargo Center,Eastern,Metropolitan
+Pittsburgh Penguins,5,PPg Paints Arena,Eastern,Metropolitan
+San Jose Sharks,28,SAP Center,Western,Pacific
+Seattle Kraken,55,Climate Pledge Arena,Western,Pacific
+St. Louis Blues,19,Enterprise Center,Western,Central
+Tampa Bay Lightning,14,Amalie Arena,Eastern,Atlantic
+Toronto Maple Leafs,10,Scotiabank Arena,Eastern,Atlantic
+Vancouver Canucks,23,Rogers Arena,Western,Pacific
+Vegas Golden Knights,54,T-Mobile Arena,Western,Pacific
+Washington Capitals,15,Capital One Arena,Eastern,Metropolitan
+Winnipeg Jets,52,Canada Life Centre,Western,Central
