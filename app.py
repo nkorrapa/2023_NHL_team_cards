@@ -25,7 +25,11 @@ team_name = st.selectbox("Pick a NHL Team", teams['event_team'].tolist())
 
 team_df = pbp[pbp.event_team == team_name]
 
-# goals pie chart
+# Place in league, division, conference
+
+# points, pp%, pk%, record
+
+# Top 5 in goals, assists, points -> PP, EV, PK
 
 goals = team_df[team_df.event_type == 'GOAL']
 
@@ -33,18 +37,5 @@ goals = goals.groupby('event_player_1_name', as_index=False).count()
 goals = pd.DataFrame(goals)
 goals = goals[['event_player_1_name','event']]
 
-#pie = plt.pie(goals.event , labels = goals.event_player_1_name)
-
-st.write("Goals")
-#st.write(goals)
-
-#st.pyplot(pie.get_figure())
-
-chart = alt.Chart(goals).mark_arc().encode(
-    theta="event",
-    color="event_player_1_name"
-)
-st.altair_chart(chart)
-
-#st.write("Pick a '{{ team }}' player")
-
+# top 2 PP units
+# top 2 PK units
