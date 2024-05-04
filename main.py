@@ -81,9 +81,11 @@ def get_sankey(team_pbp, top_10, title): # returns a sankey chart
 teams = load_file("data/teams.csv")
 pbp = load_file("data/2023pbpfull.csv")
 
+
 st.title("2023 NHL Team Cards")
 
-team = st.sidebar.selectbox("Pick a NHL Team", teams['event_team'].tolist())
+st.sidebar.write("### ", "Pick a NHL Team")
+team = st.sidebar.selectbox("",teams['event_team'].tolist())
 
 team_teams = teams[teams['event_team']== team]
 team_pbp = pbp[pbp.event_team == team]
@@ -179,10 +181,10 @@ st.divider()
 with st.container():
     col1, col2 = st.columns(2)
     with col1:
-        st.write("Record: ", record)
-        st.write("Total Points: ", str(team_teams['Points'].values[0]))
-        st.write("PP%:  ", str(team_teams['PP%'].values[0]), "%")
-        st.write("PK%:  ", str(team_teams['PK%'].values[0]), "%")
+        st.write("####", "Record: ", record)
+        st.write("####", "Total Points: ", str(team_teams['Points'].values[0]))
+        st.write("####", "PP%:  ", str(team_teams['PP%'].values[0]), "%")
+        st.write("####", "PK%:  ", str(team_teams['PK%'].values[0]), "%")
     
     with col2: 
         st.write("### ","Rank")
