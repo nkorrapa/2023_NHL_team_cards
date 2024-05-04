@@ -36,6 +36,7 @@ def get_roster(df):
     roster = roster.fillna(0)
     roster['Assists'] = roster['Assists_x'] + roster['Assists_y']
     roster = roster.drop(columns=['Assists_x', 'Assists_y'])
+    roster['Total Points'] = roster['Goals'] + roster['Assists']
     return(roster)
 
 def get_sankey(team_pbp, top_10, title): # returns a sankey chart
@@ -87,6 +88,7 @@ team = st.sidebar.selectbox("Pick a NHL Team", teams['event_team'].tolist())
 team_teams = teams[teams['event_team']== team]
 team_pbp = pbp[pbp.event_team == team]
 arena = "Home Arena: " + team_teams['home_arena'].values[0]
+image = "images/"+team+".svg.png"
 
 record = str(team_teams['W'].values[0]) + "-" + str(team_teams['L'].values[0]) + "-" + str(team_teams['OT'].values[0])
 
@@ -159,11 +161,18 @@ labels = grouped_shots['event_type']
 values = grouped_shots['event']
 shooting = go.Figure(data=[go.Pie(labels=labels, values=values, textinfo='label+percent')])
 
+
+
 ### BODY
-st.write('## ' + 'Team: ', team)
-st.write('#### ' + arena)
-st.write('Conference: ', team_teams['conference'].values[0])
-st.write('Division: ', team_teams['division'].values[0])
+with st.container():
+  col1, col2 = st.columns(2)
+  with col1: 
+    st.write('## ' + 'Team: ', team)
+    st.write('#### ' + arena)
+    st.write('Conference: ', team_teams['conference'].values[0])
+    st.write('Division: ', team_teams['division'].values[0])
+  with col2:
+    st.image(image, width = 300)
 
 st.divider()
 
@@ -176,10 +185,10 @@ with st.container():
         st.write("PK%:  ", str(team_teams['PK%'].values[0]), "%")
     
     with col2: 
-        st.write("Rank")
-        st.write("League: ", str(team_teams['league_rank'].values[0]))
-        st.write("Conference: ", str(team_teams['conference_rank'].values[0]))
-        st.write("Division: ", str(team_teams['division_rank'].values[0]))
+        st.write("### ","Rank")
+        st.write("##### " , "League: ", str(team_teams['league_rank'].values[0]))
+        st.write("##### " , "Conference: ", str(team_teams['conference_rank'].values[0]))
+        st.write("##### " , "Division: ", str(team_teams['division_rank'].values[0]))
 
 st.divider()
 with st.container():
