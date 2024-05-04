@@ -4,7 +4,6 @@ import pandas as pd
 import plotly.graph_objects as go
 import plotly.express as px
 import numpy as np
-# use container width = true
 ## functions
 st.set_page_config(page_title="2023 Team Scorecard", layout="wide")
 @st.cache_data()
@@ -81,7 +80,6 @@ def get_sankey(team_pbp, top_10, title): # returns a sankey chart
 teams = load_file("data/teams.csv")
 pbp = load_file("data/2023pbpfull.csv")
 
-
 st.title("2023 NHL Team Cards")
 
 team = st.sidebar.selectbox("Pick a NHL Team", teams['event_team'].tolist())
@@ -120,9 +118,9 @@ goals_10_ev_bar= px.bar(goals_10_ev, x='Player', y='Goals', title= "Goals")
 assists_10_ev = team_roster_ev.sort_values(by = ['Assists'], ascending=False).head(10)
 
 assists_10_ev_bar = px.bar(assists_10_ev, x = 'Player', y = 'Assists', title = "Assists")
-ev_sankey = get_sankey(team_pbp_ev, goals_10_ev, title)
 
 # Sankey
+ev_sankey = get_sankey(team_pbp_ev, goals_10_ev, title)
 
 ## PP
 
@@ -138,6 +136,7 @@ assists_10_pp_bar = px.bar(assists_10_pp, x = 'Player', y = 'Assists', title = "
 
 # Sankey
 pp_sankey = get_sankey(team_pbp_pp, goals_10_pp, title)
+
 ## PK
 
 team_roster_pk = get_roster(team_pbp_pk)
@@ -149,7 +148,6 @@ goals_10_pk_bar= px.bar(goals_10_pk, x='Player', y='Goals', title= "Goals")
 assists_10_pk = team_roster_pk.sort_values(by = ['Assists'], ascending=False).head(10)
 
 assists_10_pk_bar = px.bar(assists_10_pk, x = 'Player', y = 'Assists', title = "Assists")
-
 
 # SANKEY
 pk_sankey = get_sankey(team_pbp_pk, goals_10_pk, title)
@@ -188,11 +186,10 @@ with st.container():
     col1, col2 = st.columns(2)
     with col1:
       st.subheader("Roster Points")
-    with st.container():
-       st.dataframe(team_roster, hide_index=True, width=400)
+      st.dataframe(team_roster ,hide_index=True, use_container_width=True)
     with col2:
         st.subheader("Team Shooting %")
-        st.plotly_chart(shooting, width = 400)
+        st.plotly_chart(shooting, use_container_width=True)
 st.divider()
 
 st.subheader("Top 10 Overall Scoring")
