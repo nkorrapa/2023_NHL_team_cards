@@ -171,8 +171,8 @@ with st.container():
   with col1: 
     st.write('## ' + 'Team: ', team)
     st.write('#### ' + arena)
-    st.write('Conference: ', team_teams['conference'].values[0])
-    st.write('Division: ', team_teams['division'].values[0])
+    st.write('#### ','Conference: ', team_teams['conference'].values[0])
+    st.write('####','Division: ', team_teams['division'].values[0])
   with col2:
     st.image(image, width = 300)
 
